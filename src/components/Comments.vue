@@ -39,7 +39,7 @@
 
 <template>
     <div class="comments" >
-        <ul>
+        <ul class="commentList">
             <li v-for="comment in comments.comments" :key="comment.id">
                 <div class="comment">
                     <h3>{{comment.user}}</h3>
@@ -48,11 +48,60 @@
             </li>
         </ul>
 
-        <input type="text" placeholder="Enter your message" v-model="message" />
-        <button @click="addMessage">Add Message</button>
+        <div class="messageForm">
+            <input type="text" placeholder="Enter your message" v-model="message" />
+            <button @click="addMessage">Add Message</button>
+        </div>
     </div>
 </template>
 
 <style scoped>
+    .comments {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
+    .commentList {
+        list-style: none;
+        padding: 0 1rem;
+        height: 75vh;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(149, 197, 238) #ffffff;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    .messageForm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .messageForm input {
+        width: 76%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .messageForm button {
+        width: 80%;
+        padding: 10px;
+        background-color: rgb(149, 197, 238);
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+    }
 </style>

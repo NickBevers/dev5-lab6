@@ -23,6 +23,5 @@ import Comments from './components/Comments.vue'
 .detailCommentsContainer{
     display: flex;
     flex-direction: column;
-    
 }
 </style>
