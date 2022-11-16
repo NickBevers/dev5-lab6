@@ -64,6 +64,8 @@
 
     .commentList {
         list-style: none;
+        display: flex;
+        flex-direction: column-reverse;
         padding: 0 1rem;
         height: 75vh;
         overflow-y: auto;
