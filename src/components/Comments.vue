@@ -67,7 +67,7 @@
         display: flex;
         flex-direction: column-reverse;
         padding: 0 1rem;
-        height: 75vh;
+        height: 65vh;
         overflow-y: auto;
         scrollbar-width: thin;
         scrollbar-color: rgb(149, 197, 238) #ffffff;
