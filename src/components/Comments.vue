@@ -40,7 +40,7 @@
 <template>
     <div class="comments" >
         <ul class="commentList">
-            <li v-for="comment in comments.comments" :key="comment.id">
+            <li v-for="comment in comments.comments.slice().reverse()" :key="comment.id">
                 <div class="comment">
                     <h3>{{comment.user}}</h3>
                     <p>{{comment.text}}</p>
