@@ -28,7 +28,7 @@
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                comments.comments.unshift({
+                comments.comments.push({
                     _id: data.data._id,
                     user: data.data.user,
                     text: data.data.text
